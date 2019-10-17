@@ -6,7 +6,7 @@ class Header extends React.Component {
 			<header className="top">
 				<h1>Catch of the day</h1>
 				<h3 className="tagline">
-				<span>Fresh Seafood Market</span>
+				<span>{this.props.tagline}</span>
 				</h3>
 			</header>
 		)
