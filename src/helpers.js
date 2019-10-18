@@ -5,7 +5,7 @@ export function formatPrice(cents) {
     });
   }
   
-  export function rando(arr) {
+  export function random(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
   }
   
