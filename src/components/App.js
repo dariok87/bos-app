@@ -9,7 +9,12 @@ class App extends React.Component {
     order: {}
   };
   addFish = fish => {
-    console.log("ADDING A FISH");
+    // 1. Take a copy of the existing state ( no mutation! )
+    const fishes = { ...this.state.fishes };
+    // 2. Add our new fish to that fishes variable
+    fishes[`fish${Date.now()}`] = fish;
+    // 3. Set the new fishes object to state
+    this.setState({ fishes }); 
   };
   render() {
     return (
