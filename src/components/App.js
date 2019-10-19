@@ -16,6 +16,9 @@ class App extends React.Component {
     // 3. Set the new fishes object to state
     this.setState({ fishes }); 
   };
+  loadSampleFishes = () => {
+    console.log("ribetine")
+  };
   render() {
     return (
       <div className="catch-of-the-day">
@@ -23,7 +26,7 @@ class App extends React.Component {
           <Header tagline="FRESH SEAFOOD MARKET" />
         </div>
         <Order />
-        <Inventory addFish={this.addFish}/>
+        <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes}/>
       </div>
     )
   }
