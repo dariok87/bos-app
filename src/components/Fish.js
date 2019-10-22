@@ -2,12 +2,12 @@ import React from "react";
 
 class Fish extends React.Component {
 	render() {
-		const image = this.props.details.image;
-		const name = this.props.details.name;
+		const {image, name, price, description, status} = this.props.details;
+
 		return (
 			<li className="menu-fish">
 				<img src={image} alt={name} />
-				<h3 className="fish-name">{this.props.details.name}</h3>
+				<h3 className="fish-name">{name}</h3>
 			</li>
 		);
 	}
