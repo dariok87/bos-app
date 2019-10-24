@@ -32,7 +32,7 @@ const fishes = {
     desc:
       "Lean flesh with a mild, sweet flavor profile, moderately firm texture and large, moist flakes. ",
     price: 1129,
-    status: "available"
+    status: "unavailable"
   },
 
   fish5: {
