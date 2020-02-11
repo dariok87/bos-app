@@ -12,6 +12,14 @@ class App extends React.Component {
     order: {}
   };
 
+  componentDidMount() {
+    const { params } = this.props.match;
+    this.ref = base.syncState(`${params.storeId}/fishes`, {
+      context: this,
+      state: "fishes"
+    });
+  }
+
   addFish = fish => {
     // 1. Take a copy of the existing state ( no mutation! )
     const fishes = { ...this.state.fishes };
