@@ -3,10 +3,7 @@ import React from "react";
 class EditFishForm extends React.Component {
   handleChange = event => {
     console.log(event);
-    // update that fish
   };
-  render() {
-    return (
       <div>
         <input
           type="text"
