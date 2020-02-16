@@ -4,13 +4,14 @@ class EditFishForm extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" name="name" />
-        <input type="text" name="price" />
-        <select type="text" name="status"></select>
-        <option value="available">Fresh!</option>
-        <option value="unavailable">Sold Out!</option>
-        <textarea type="text" name="desc" />
-        <input type="text" name="image" />
+        <input type="text" name="name" value={this.props.fish.name} />
+        <input type="text" name="price" value={this.props.fish.price} />
+        <select type="text" name="status" value={this.props.fish.status}>
+          <option value="available">Fresh!</option>
+          <option value="unavailable">Sold Out!</option>
+        </select>
+        <textarea type="text" name="desc" value={this.props.fish.desc} />
+        <input type="text" name="image" value={this.props.fish.image} />
       </div>
     );
   }
