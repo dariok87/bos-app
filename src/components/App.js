@@ -87,8 +87,10 @@ class App extends React.Component {
         <Order fishes={this.state.fishes} order={this.state.order} />
         <Inventory
           addFish={this.addFish}
+          updateFish={this.updateFish}
           loadSampleFishes={this.loadSampleFishes}
           fishes={this.state.fishes}
+          u
         />
       </div>
     );
