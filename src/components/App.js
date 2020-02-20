@@ -77,6 +77,15 @@ class App extends React.Component {
     this.setState({ order });
   };
 
+  removeFromOrder = key => {
+    // 1. Take a copy of state
+    const order = { ...this.state.order };
+    // 2. Remove that item from order
+    delete order[key];
+    // 3. Call setState to update our state object
+    this.setState({ order });
+  };
+
   render() {
     return (
       <div className="catch-of-the-day">
