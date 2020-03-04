@@ -27,7 +27,7 @@ class Order extends React.Component {
       <CSSTransition
         classNames="order"
         key={key}
-        timeout={{ enter: 260, exit: 250 }}
+        timeout={{ enter: 500, exit: 500 }}
       >
         <li key={key}>
           <span>
