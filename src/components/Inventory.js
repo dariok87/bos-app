@@ -13,8 +13,8 @@ class Inventory extends React.Component {
     addFish: PropTypes.func
   };
 
-  authenticate = () => {
-    alert("facebook");
+  authenticate = provider => {
+    alert(provider);
   };
 
   render() {
