@@ -15,8 +15,12 @@ class Inventory extends React.Component {
     addFish: PropTypes.func
   };
 
+  authHandler = async authData => {
+    console.log(authData);
+  };
+
   authenticate = provider => {
-    const authProvider = new firebase.auth[`${provider}authProvider`]();
+    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
       .auth()
       .signInWithPopup(authProvider)
