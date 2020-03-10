@@ -46,7 +46,10 @@ class Inventory extends React.Component {
   };
 
   render() {
-    return <Login authenticate={this.authenticate} />;
+    // 1. Check if they are logged in
+    if (!this.state.uid) {
+      return <Login authenticate={this.authenticate} />;
+    }
     return (
       <div className="inventory">
         <h2>Inventory</h2>
