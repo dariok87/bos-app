@@ -15,6 +15,11 @@ class Inventory extends React.Component {
     addFish: PropTypes.func
   };
 
+  state = {
+    uid: null,
+    owner: null
+  };
+
   authHandler = async authData => {
     // 1. Look up the current store in the firebase database
     const store = await base.fetch(this.props.storeId, { context: this });
