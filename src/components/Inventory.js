@@ -46,6 +46,8 @@ class Inventory extends React.Component {
   };
 
   render() {
+    const logout = <button onClick={this.logout}>Log Out!</button>;
+
     // 1. Check if they are logged in
     if (!this.state.uid) {
       return <Login authenticate={this.authenticate} />;
@@ -56,12 +58,16 @@ class Inventory extends React.Component {
       return (
         <div>
           <p>Sorry, you are not the owner!</p>
+          {logout}
         </div>
       );
     }
+
+    // 3. They must be the owner, just render the Inventory
     return (
       <div className="inventory">
         <h2>Inventory</h2>
+        {logout}
         {Object.keys(this.props.fishes).map(key => (
           <EditFishForm
             key={key}
