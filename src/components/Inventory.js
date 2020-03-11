@@ -45,6 +45,12 @@ class Inventory extends React.Component {
       .then(this.authHandler);
   };
 
+  logout = async () => {
+    console.log("logging out!");
+    await firebase.auth().signOut();
+    this.setState({ uid: null });
+  };
+
   render() {
     const logout = <button onClick={this.logout}>Log Out!</button>;
 
@@ -54,7 +60,7 @@ class Inventory extends React.Component {
     }
 
     // 2. Check if they are not the owner of the store
-    if (this.state.uit !== this.state.owner) {
+    if (this.state.uid !== this.state.owner) {
       return (
         <div>
           <p>Sorry, you are not the owner!</p>
